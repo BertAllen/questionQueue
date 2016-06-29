@@ -1,9 +1,10 @@
 (function () {
     angular.module("MasterController")
-        .component("SubQuestion", {
+        .component("SubQuestionComponent", {
             templateURL: "subQuestMod.html",
-            controller: function () {
-
-            }
+            controller: SubQuestion(),
         });
+    function SubQuestion() {
+        
+    }
 } ())

@@ -1,9 +1,10 @@
 (function () {
     angular.module("MasterController")
-        .component("ViewQueue", {
+        .component("ViewQueueComponent", {
             templateURL: "viewQueueMod.html",
-            controller: function () {
-
-            }
+            controller: ViewQueue () 
         });
+function ViewQueue() {
+            
+        }
 } ())
