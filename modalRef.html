@@ -1,0 +1,44 @@
+<!--Submit Question Modal-->
+<div class="modal fade" id="submitQuestionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Submit Your Question</h4>
+            </div>
+            <div class="modal-body">
+                <!--the following ul block needs to be modified to reflect the current data-set-->
+                <!--<ul id="songList" ng-repeat="song in member.mySongs">-->
+                <!--<li id="song">-->
+                <!--{{song.title}} <a ui-sref="home({songName:song.title})"><span class="badge">load song</span></a>-->
+                <!--</li>-->
+                <!--</ul>-->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Add Question To Queue</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end of Submit Question model-->
+<!--View Question Queue model-->
+<div class="modal fade" id="viewQuestionQueueModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">All Questions Currently In Queue</h4>
+            </div>
+            <div class="modal-body">
+                <ul id="questionList" ng-repeat="question in queue">
+                    <li id="question">
+                        <!--the following line still needs modification-->
+                        {{question.title}} <a ui-sref="home({songName:song.title})"><span class="badge">Remove</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close Queue</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end of View Question Queue model-->
