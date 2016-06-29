@@ -7,8 +7,8 @@
 <body ng-controller="QueueController as qc">
     {{2+2}} <br>
 
-<button type="button" class="btn btn-warning">Submit Question</button>
-    <button type="button" class="btn btn-info">Inspect Queue</button>
+<button type="button" class="btn btn-warning" ng-click="qc.openModel(1)">Submit Question</button>
+    <button type="button" class="btn btn-info" ng-click="qc.openModel(2)">Inspect Queue</button>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="app/app.js"></script>
     <script src="components/subQuest.js"></script>
