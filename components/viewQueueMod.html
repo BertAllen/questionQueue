@@ -1,6 +1,7 @@
 <!--View Question Queue model-->
-<div ng-controller="ViewQueue as vq">
-    <div class="modal fade" id="viewQuestionQueueModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div>
+    {{vq.apple}}
+    <div class="" id="viewQuestionQueueModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -9,16 +10,18 @@
                 <div class="modal-body">
                     <ul id="questionList" ng-repeat="question in queue">
                         <li id="question">
-                            <!--the following line still needs modification-->
+     
                             {{question.title}} <a ui-sref="home({songName:song.title})"><span class="badge">Remove</span></a>
                         </li>
                     </ul>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close Queue</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vq.closeModal()">Close Queue</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!--end of View Question Queue model-->
+
+<!--<h1>Hello from the queue</h1>-->

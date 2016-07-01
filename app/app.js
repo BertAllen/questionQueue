@@ -1,18 +1,15 @@
 (function () {
-    angular.module("MasterController", [])
+    angular.module("MasterApp", [])
         .controller("QueueController", function () {
-            var qc = this
-            qc.openModel = function (mod) {
-                switch (mod) {
-                    case 1: //submit question
+            var qc = this;
+            qc.activeView = 0;
+            // qc.openModel = function (mod) {
+            //     qc.activeView = mod;
+            // }
 
-                        break;
-                    case 2: //inspect queue
-
-                        break;
-                }
+            qc.changeView = function (view) { 
+                qc.activeView = view;
             }
-
 
         })
 

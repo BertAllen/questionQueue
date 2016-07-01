@@ -1,25 +1,27 @@
 <!--Submit Question Modal-->
-<div ng-controller="SubQuestion as sq">
-    <div class="modal fade" id="submitQuestionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div>
+    {{sq.banana}}
+
+    <div class="" id="submitQuestionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="myModalLabel">Submit Your Question</h4>
                 </div>
-                <div class="modal-body">
-                    <form action="">
+                <form action="">
+                    <div class="modal-body">
                         <label for="">Question Description<input type="text" ng-model="sq.question.desc"></label>
-                        <label for="">Question To Submit<textarea type="text" ng-model="sq.question.quest"></label>
+                        <label for="">Question To Submit<textarea type="text" ng-model="sq.question.quest"></textarea></label>
                         <!--the following ul block needs to be modified to reflect the current data-set-->
                         <!--<ul id="songList" ng-repeat="song in member.mySongs">-->
                         <!--<li id="song">-->
                         <!--{{song.title}} <a ui-sref="home({songName:song.title})"><span class="badge">load song</span></a>-->
                         <!--</li>-->
                         <!--</ul>-->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Add Question To Queue</button>
-                </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="sq.closeModal()">Add Question To Queue</button>
+                    </div>
                 </form>
             </div>
         </div>

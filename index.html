@@ -1,14 +1,23 @@
-<html ng-app="MasterController">
+<html ng-app="MasterApp">
 <head>
     <meta charset="UTF-8">
     <title>Question Queue</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body ng-controller="QueueController as qc">
+
+    <div ng-show="qc.activeView == 2">
+        <!--<test></test>-->
+        <view-queue change-view="qc.changeView"></view-queue>
+    </div>
+    <div ng-show="qc.activeView == 1">
+        <submit-question change-view="qc.changeView"></submit-question>
+    </div>
+
     {{2+2}} <br>
 
-<button type="button" class="btn btn-warning" ng-click="qc.openModel(1)">Submit Question</button>
-    <button type="button" class="btn btn-info" ng-click="qc.openModel(2)">Inspect Queue</button>
+<button type="button" class="btn btn-warning" ng-click="qc.changeView(1)">Submit Question</button>
+    <button type="button" class="btn btn-info" ng-click="qc.changeView(2)">Inspect Queue</button>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="app/app.js"></script>
     <script src="components/subQuest.js"></script>
