@@ -5,7 +5,7 @@
 
             return {
                 //list of functions goes here .....
-                
+                x: "this is from the factory"
             }
         })
 }())

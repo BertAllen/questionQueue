@@ -1,5 +1,5 @@
 (function () {
-    angular.module("MasterApp", ["QuestionQueueFactory"])
+    angular.module("MasterApp", [])
         .controller("QueueController", function () {
             var qc = this;
             qc.activeView = 0;
